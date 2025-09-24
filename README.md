@@ -16,7 +16,7 @@ Todos os trabalhos orientados por mim devem gerar publicações. Estamos investi
 Benefícios: relevância científica e profissional, reconhecimento acadêmico e possibilidade de ingresso em programas de mestrado.
 
 ### 🛠️ Ambiente de Escrita
-Cada aluno deve: baixar o template disponível neste repositório; criar um repositório próprio no GitHub para o TCC; compartilhar o repositório comigo no e-mail **diego.castro@cefet-rj.br**.
+Cada aluno deve: baixar o template disponível neste repositório; criar um repositório próprio no GitHub para o TCC; compartilhar o repositório comigo no e-mail **diego.castro@cefet-rj.br** ou com o e-mail do seu orientador.
 Ferramentas necessárias: [VS Code](https://code.visualstudio.com/), extensão **LaTeX Workshop** (VS Code) e [MikTeX](https://miktex.org/).
 Tutoriais recomendados: [Tutorial 1](https://www.youtube.com/watch?v=2VlV973dL3E) e [Tutorial 2](https://www.youtube.com/watch?v=4lyHIQl4VM8).
 
@@ -70,7 +70,9 @@ Dicas práticas para montar a string: use aspas para frases exatas ("jogos séri
 1. Definição dos elementos:
    - P: "Arquitetura de software"
    - I: ("jogos sérios" OR "game based learning")
+   - C:
    - O: ("ferramentas" OR "aplicações")
+   - C:
 2. Montagem simples:
    ("Arquitetura de software") AND ("jogos sérios" OR "game based learning") AND ("ferramentas" OR "aplicações")
 3. Montagem para Scopus:
@@ -81,7 +83,18 @@ Utiliza o framework PICOC para montar a string de busca (conforme explicado acim
 
 #### Análise dos artigos retornados
 Ferramenta recomendada: [Parsif.al](https://parsif.al).
-Processo de filtragem: leitura dos títulos → exclusão de artigos irrelevantes; leitura dos resumos (abstracts) → nova filtragem; leitura completa apenas dos artigos restantes → responder às questões de pesquisa.
+#### Processo de Filtragem dos Artigos
+
+O processo de análise dos artigos deve seguir três etapas principais:
+
+1. **Leitura dos títulos**
+   - Marque como **excluídos** os artigos que não tiverem relação com o tema de pesquisa.
+
+2. **Leitura dos resumos (abstracts)**
+   - Novamente, exclua os artigos que não forem relevantes.
+
+3. **Leitura completa dos artigos restantes**
+   - Analise detalhadamente e utilize-os para **responder às questões de pesquisa**.
 
 ### 4. Proposta
 Capítulo mais particular do trabalho. Deve conter no mínimo duas seções: apresentação da proposta e avaliação da proposta.
