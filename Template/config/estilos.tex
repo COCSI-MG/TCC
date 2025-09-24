@@ -1,0 +1,74 @@
+% Cores customizadas
+\definecolor{background}{rgb}{0.97, 0.97, 0.97}
+\definecolor{keyword}{rgb}{0.86, 0.08, 0.24}
+\definecolor{string}{rgb}{0.2, 0.6, 0.2}
+\definecolor{comment}{rgb}{0.4, 0.4, 0.4}
+\definecolor{number}{rgb}{0.1, 0.5, 0.8}
+\definecolor{type}{rgb}{0.58, 0, 0.82}
+\definecolor{annotation}{rgb}{0.8, 0.33, 0.0}
+\definecolor{lstborder}{rgb}{0.85,0.85,0.85}
+
+% Aparência geral dos listings
+\lstdefinestyle{mystyle}{
+    basicstyle=\linespread{1.0}\ttfamily\small,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=10pt,
+    showstringspaces=false,
+    breaklines=true,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+    frame=single,
+    framesep=7pt,
+    framerule=0.5pt,
+    rulecolor=\color{lstborder},
+    backgroundcolor=\color{background},
+    captionpos=b
+}
+
+\lstset{style=mystyle}
+
+% Linguagem Java customizada
+\lstdefinelanguage{Java}{
+    morekeywords={
+      abstract, assert, boolean, break, byte, case, catch, char, class, const,
+      continue, default, do, double, else, enum, extends, final, finally, float,
+      for, goto, if, implements, import, instanceof, int, interface, long, native,
+      new, null, package, private, protected, public, return, short, static, strictfp,
+      super, switch, synchronized, this, throw, throws, transient, try, void, volatile, while
+    },
+    keywordstyle=\color{keyword}\bfseries,
+    sensitive=true,
+    morecomment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    commentstyle=\color{comment}\itshape,
+    morestring=[b]",
+    morestring=[b]',
+    stringstyle=\color{string},
+    % ANNOTATION HIGHLIGHT
+    literate=
+     *{0}{{{\color{number}0}}}{1}
+      {1}{{{\color{number}1}}}{1}
+      {2}{{{\color{number}2}}}{1}
+      {3}{{{\color{number}3}}}{1}
+      {4}{{{\color{number}4}}}{1}
+      {5}{{{\color{number}5}}}{1}
+      {6}{{{\color{number}6}}}{1}
+      {7}{{{\color{number}7}}}{1}
+      {8}{{{\color{number}8}}}{1}
+      {9}{{{\color{number}9}}}{1}
+      {@}{{{\color{annotation}\textbf{@}}}}{1}
+      {á}{{\'a}}1
+      {é}{{\'e}}1
+      {í}{{\'i}}1
+      {ó}{{\'o}}1
+      {ú}{{\'u}}1
+      {â}{{\^a}}1
+      {ê}{{\^e}}1
+      {ô}{{\^o}}1
+      {ã}{{\~a}}1
+      {õ}{{\~o}}1
+      {ç}{{\c{c}}}1,
+    morekeywords=[2]{String, Integer, Double, Float, Boolean, Long, Short, Byte},
+    keywordstyle=[2]\color{type}\bfseries
+}

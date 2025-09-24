@@ -1,0 +1,13 @@
+\newboolean{showcomments}
+\setboolean{showcomments}{true}
+
+\ifthenelse{\boolean{showcomments}}
+ { \newcommand{\mynote}[3]{
+      \fbox{\bfseries\sffamily\scriptsize#1}
+        {\small$\blacktriangleright$\textsf{\textcolor{#3}{{\em #2}\bf }}$\blacktriangleleft$}}}
+        { \newcommand{\mynote}[2]{}}
+
+\newcommand{\pantoja}[1]{\mynote{Pantoja}{#1}{blue}}
+\newcommand{\diego}[1]{\mynote{Diego}{#1}{red}}
+\newcommand{\modify}[1]{\mynote{Ajustes}{#1}{orange}}
+\newcommand{\guilherme}[1]{\mynote{Guilherme}{#1}{brown}}
