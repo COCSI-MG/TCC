@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  mkdocs:
+    image: squidfunk/mkdocs-material:latest
+    container_name: mkdocs
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./docs:/docs/docs
+      - ./mkdocs.yml:/docs/mkdocs.yml
+    working_dir: /docs
+    command: serve --dev-addr 0.0.0.0:8000 --dirtyreload --livereload
+    environment:
+      - MKDOCS_WATCHDOG_USE_POLLING=true
