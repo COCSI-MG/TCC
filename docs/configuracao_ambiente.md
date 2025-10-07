@@ -51,6 +51,9 @@ Caso queira fazer isso via terminal, podemos executar o seguinte comando no root
 # Apagar a pasta .git
 rmdir /s /q .git
 
+# Apagar a pasta .github
+rmdir /s /q .github
+
 # Apagar a pasta docs
 rmdir /s /q docs
 
@@ -65,6 +68,9 @@ del docker-compose.yml
 ```bash
 # Apagar a pasta .git
 rm -rf .git
+
+# Apagar a pasta .github
+rm -rf .github
 
 # Apagar a pasta docs
 rm -rf docs
