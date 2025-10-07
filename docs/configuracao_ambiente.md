@@ -37,6 +37,7 @@ git clone https://github.com/COCSI-MG/TCC.git
 Após isso, é necessario excluirmos alguns arquivos que não serão utilizados.
 
 - `.git` – remove o histórico remoto para que você possa criar seu próprio repositório Git.
+- `.github` – revemo os arquivos do github.
 - `./docs` – limpa essa documentação exemplo que não será usada localmente.
 - `mkdocs.yml` – limpa a configuração da documentação exemplo.
 - `README.md` – limpa o README.
