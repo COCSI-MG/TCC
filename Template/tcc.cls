@@ -175,7 +175,7 @@
 	\end{flushright}
 	\vfill
 	{\bfseries \large Rio de Janeiro,\\
-		Novembro de 2024}
+		2024}
 }
 
 %dcoverback
@@ -210,7 +210,7 @@
 	\end{flushright}
 	\vfill
 	{\bfseries \large Rio de Janeiro,\\
-		Novembro de 2024}
+		2024}
 }
 %dform
 
@@ -219,6 +219,13 @@
 	\center % Center everything on the page
 	\vfill
 	\pagebreak
+}
+
+\newcommand{\dblanksheet}{
+	\clearpage
+	\thispagestyle{empty}
+	\mbox{}
+	\clearpage
 }
 
 %ddedicatory
