@@ -61,15 +61,15 @@
 \sectionfont{\normalsize \bfseries \flushleft}
 
 \titleformat{\chapter}[display]
-{\fontsize{18pt}{\baselineskip}\selectfont\bfseries}{\chaptertitlename\ \thechapter}{2em}{}
+{\fontsize{18pt}{\baselineskip}\selectfont\bfseries}{}{0pt}{}
 \titlespacing*{\chapter}{0pt}{-2em}{2em}
 
 \titleformat{\section}[hang]
-{\fontsize{14pt}{\baselineskip}\selectfont\bfseries}{\thesection}{2em}{}
+{\fontsize{14pt}{\baselineskip}\selectfont\bfseries}{\thesection}{1em}{}
 \titlespacing*{\section}{0pt}{1em}{1em}
 
 \titleformat{\subsection}[hang]
-{\fontsize{14pt}{\baselineskip}\selectfont\bfseries}{\thesubsection}{2em}{}
+{\fontsize{14pt}{\baselineskip}\selectfont\bfseries}{\thesubsection}{1em}{}
 \titlespacing*{\subsection}{0pt}{1em}{1em}
 
 \setlength{\cftbeforetoctitleskip}{-2em}
@@ -93,15 +93,15 @@
 
 
 \titleformat{\chapter}[display]
-{\fontsize{18pt}{\baselineskip}\selectfont\bfseries}{\chaptertitlename\ \thechapter}{2em}{}
+{\fontsize{18pt}{\baselineskip}\selectfont\bfseries}{}{0pt}{}
 \titlespacing*{\chapter}{0pt}{-2em}{2em}
 
 \titleformat{\section}[hang]
-{\fontsize{14pt}{\baselineskip}\selectfont\bfseries}{\thesection}{2em}{}
+{\fontsize{14pt}{\baselineskip}\selectfont\bfseries}{\thesection}{1em}{}
 \titlespacing*{\section}{0pt}{1em}{1em}
 
 \titleformat{\subsection}[hang]
-{\fontsize{14pt}{\baselineskip}\selectfont\bfseries}{\thesubsection}{2em}{}
+{\fontsize{14pt}{\baselineskip}\selectfont\bfseries}{\thesubsection}{1em}{}
 \titlespacing*{\subsection}{0pt}{1em}{1em}
 
 \setlength{\cftbeforetoctitleskip}{-2em}
@@ -174,7 +174,7 @@
 		\end{minipage}\\
 	\end{flushright}
 	\vfill
-	{\bfseries \large Rio de Janeiro,\\
+	{\bfseries \large RIO DE JANEIRO,\\
 		2024}
 }
 
@@ -187,7 +187,6 @@
 
 	\begin{minipage}{\textwidth}
 		\begin{center}
-			{\bfseries \large CEFET/RJ - CENTRO FEDERAL DE EDUCAÇÃO TECNOLÓGICA CELSO SUCKOW DA FONSECA}\\[6em]
 			{\bfseries \LARGE \dtitle}\\[6em]% Title of your document
 			\raggedleft \dauthor
 		\end{center}
@@ -209,7 +208,7 @@
 		\end{minipage}\\
 	\end{flushright}
 	\vfill
-	{\bfseries \large Rio de Janeiro,\\
+	{\bfseries \large RIO DE JANEIRO,\\
 		2024}
 }
 %dform
