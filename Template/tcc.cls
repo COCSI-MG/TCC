@@ -60,8 +60,8 @@
 \chapterfont{}
 \sectionfont{\normalsize \bfseries \flushleft}
 
-\titleformat{\chapter}[display]
-{\fontsize{18pt}{\baselineskip}\selectfont\bfseries}{}{0pt}{}
+\titleformat{\chapter}[hang]
+{\fontsize{18pt}{\baselineskip}\selectfont\bfseries}{\thechapter.}{0.5em}{}
 \titlespacing*{\chapter}{0pt}{-2em}{2em}
 
 \titleformat{\section}[hang]
@@ -92,8 +92,8 @@
 \sectionfont{\normalsize \bfseries \flushleft}
 
 
-\titleformat{\chapter}[display]
-{\fontsize{18pt}{\baselineskip}\selectfont\bfseries}{}{0pt}{}
+\titleformat{\chapter}[hang]
+{\fontsize{18pt}{\baselineskip}\selectfont\bfseries}{\thechapter.}{0.5em}{}
 \titlespacing*{\chapter}{0pt}{-2em}{2em}
 
 \titleformat{\section}[hang]
@@ -153,7 +153,8 @@
 
 	\begin{minipage}{\textwidth}
 		\begin{center}
-			{\bfseries \large CEFET/RJ - CENTRO FEDERAL DE EDUCAÇÃO TECNOLÓGICA CELSO SUCKOW DA FONSECA}\\[6em]
+			{\bfseries \large CEFET/RJ - CENTRO FEDERAL DE EDUCAÇÃO TECNOLÓGICA CELSO SUCKOW DA FONSECA}\\[0.5em]
+			{\bfseries \large \dprogram}\\[6em]
 			{\bfseries \LARGE \dtitle}\\[6em]% Title of your document
 			\raggedleft \dauthor
 		\end{center}
@@ -244,14 +245,15 @@
     \newpage
 }
 
-\newcommand{\depigrafe}[1]{
+\newcommand{\depigrafe}[3][]{
+    \if\relax\detokenize{#1}\relax\else\nocite{#1}\fi
     \vspace*{\fill} % Move para a parte inferior da página
     \begin{flushright} % Alinha todo o conteúdo à direita
         \begin{minipage}{0.4\textwidth} % Controla a largura do texto
-            \itshape #1
+            \itshape #2
         \end{minipage}\\
         \vspace{1em} % Adiciona espaço entre a citação e o autor
-        \textbf{(Nome do autor)}
+        \textbf{#3}
     \end{flushright}
     \vspace{1cm} % Espaçamento abaixo para melhor posicionamento
     \newpage
