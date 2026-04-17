@@ -1,0 +1,41 @@
+{
+  "latex-workshop.formatting.latex": "latexindent",
+  "[latex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
+  "cSpell.enabled": true,
+  "cSpell.language": "en,pt,pt-BR",
+  "cSpell.checkOnlyEnabledFileTypes": false,
+  "cSpell.diagnosticLevel": "Error",
+  "cSpell.ignorePaths": [
+    "*",
+    "!capitulos/**"
+  ],
+  "editor.wordWrap": "on",
+  "editor.rulers": [
+    80
+  ],
+  "editor.wordWrapColumn": 80,
+  "editor.formatOnSave": true,
+  "latex-workshop.latex.outDir": "build",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/__pycache__": true,
+    "**/*.aux": true,
+    "**/*.bbl": true,
+    "**/*.blg": true,
+    "**/*.out": true,
+    "**/*.toc": true,
+    "**/*.lot": true,
+    "**/*.lof": true,
+    "**/*.fls": true,
+    "**/*.fdb_latexmk": true,
+    "**/*.synctex.gz": true,
+    "**/*.log": true
+  },
+  "cSpell.words": [
+    "Scopus"
+  ]
+}

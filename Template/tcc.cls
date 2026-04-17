@@ -6,13 +6,16 @@
 %% Load additional packages and commands.
 \RequirePackage[a4paper, left=3cm, right=2cm, top=3cm, bottom=2cm]{geometry}
 \RequirePackage[utf8]{inputenc}
-\RequirePackage[square,authoryear]{natbib}
 \RequirePackage[dvipsnames,svgnames,table,xcdraw]{xcolor}
 \RequirePackage{amsmath}
 \RequirePackage{booktabs}
 \RequirePackage{colortbl}
 \RequirePackage{datagidx}
 \RequirePackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+
+\RequirePackage[none]{hyphenat}
 \RequirePackage{float}
 \RequirePackage{framed}
 \RequirePackage{graphicx}

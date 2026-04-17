@@ -1,0 +1,36 @@
+indentPreamble: 1
+
+defaultIndent: "  "  # 2 espaços (pode mudar pra 4 se quiser)
+
+lookForAlignDelims:
+  tabular: 1
+
+indentRules:
+  chapter: 0
+  section: 0
+  subsection: 0
+  subsubsection: 0
+
+noAdditionalIndent:
+  itemize: 1
+  enumerate: 1
+  figure: 1
+  table: 1
+
+modifyLineBreaks:
+  preserveBlankLines: 1
+  condenseMultipleBlankLinesInto: 1
+
+removeTrailingWhitespace:
+  beforeProcessing: 1
+  afterProcessing: 1
+
+alignDelims:
+  tabular:
+    alignDoubleBackSlash: 1
+    alignRowsWithoutMaxDelims: 1
+
+verbatimEnvironments:
+  verbatim: 1
+  lstlisting: 1
+  minted: 1
