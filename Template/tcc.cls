@@ -60,16 +60,16 @@
 \chapterfont{}
 \sectionfont{\normalsize \bfseries \flushleft}
 
-\titleformat{\chapter}[display]
-{\fontsize{18pt}{\baselineskip}\selectfont\bfseries}{\chaptertitlename\ \thechapter}{2em}{}
+\titleformat{\chapter}[hang]
+{\fontsize{18pt}{\baselineskip}\selectfont\bfseries}{\thechapter.}{0.5em}{}
 \titlespacing*{\chapter}{0pt}{-2em}{2em}
 
 \titleformat{\section}[hang]
-{\fontsize{14pt}{\baselineskip}\selectfont\bfseries}{\thesection}{2em}{}
+{\fontsize{14pt}{\baselineskip}\selectfont\bfseries}{\thesection}{1em}{}
 \titlespacing*{\section}{0pt}{1em}{1em}
 
 \titleformat{\subsection}[hang]
-{\fontsize{14pt}{\baselineskip}\selectfont\bfseries}{\thesubsection}{2em}{}
+{\fontsize{14pt}{\baselineskip}\selectfont\bfseries}{\thesubsection}{1em}{}
 \titlespacing*{\subsection}{0pt}{1em}{1em}
 
 \setlength{\cftbeforetoctitleskip}{-2em}
@@ -92,16 +92,16 @@
 \sectionfont{\normalsize \bfseries \flushleft}
 
 
-\titleformat{\chapter}[display]
-{\fontsize{18pt}{\baselineskip}\selectfont\bfseries}{\chaptertitlename\ \thechapter}{2em}{}
+\titleformat{\chapter}[hang]
+{\fontsize{18pt}{\baselineskip}\selectfont\bfseries}{\thechapter.}{0.5em}{}
 \titlespacing*{\chapter}{0pt}{-2em}{2em}
 
 \titleformat{\section}[hang]
-{\fontsize{14pt}{\baselineskip}\selectfont\bfseries}{\thesection}{2em}{}
+{\fontsize{14pt}{\baselineskip}\selectfont\bfseries}{\thesection}{1em}{}
 \titlespacing*{\section}{0pt}{1em}{1em}
 
 \titleformat{\subsection}[hang]
-{\fontsize{14pt}{\baselineskip}\selectfont\bfseries}{\thesubsection}{2em}{}
+{\fontsize{14pt}{\baselineskip}\selectfont\bfseries}{\thesubsection}{1em}{}
 \titlespacing*{\subsection}{0pt}{1em}{1em}
 
 \setlength{\cftbeforetoctitleskip}{-2em}
@@ -153,7 +153,8 @@
 
 	\begin{minipage}{\textwidth}
 		\begin{center}
-			{\bfseries \large CEFET/RJ - CENTRO FEDERAL DE EDUCAÇÃO TECNOLÓGICA CELSO SUCKOW DA FONSECA}\\[6em]
+			{\bfseries \large CEFET/RJ - CENTRO FEDERAL DE EDUCAÇÃO TECNOLÓGICA CELSO SUCKOW DA FONSECA}\\[0.5em]
+			{\bfseries \large \dprogram}\\[6em]
 			{\bfseries \LARGE \dtitle}\\[6em]% Title of your document
 			\raggedleft \dauthor
 		\end{center}
@@ -174,8 +175,8 @@
 		\end{minipage}\\
 	\end{flushright}
 	\vfill
-	{\bfseries \large Rio de Janeiro,\\
-		Novembro de 2024}
+	{\bfseries \large RIO DE JANEIRO,\\
+		2024}
 }
 
 %dcoverback
@@ -187,7 +188,6 @@
 
 	\begin{minipage}{\textwidth}
 		\begin{center}
-			{\bfseries \large CEFET/RJ - CENTRO FEDERAL DE EDUCAÇÃO TECNOLÓGICA CELSO SUCKOW DA FONSECA}\\[6em]
 			{\bfseries \LARGE \dtitle}\\[6em]% Title of your document
 			\raggedleft \dauthor
 		\end{center}
@@ -209,8 +209,8 @@
 		\end{minipage}\\
 	\end{flushright}
 	\vfill
-	{\bfseries \large Rio de Janeiro,\\
-		Novembro de 2024}
+	{\bfseries \large RIO DE JANEIRO,\\
+		2024}
 }
 %dform
 
@@ -219,6 +219,13 @@
 	\center % Center everything on the page
 	\vfill
 	\pagebreak
+}
+
+\newcommand{\dblanksheet}{
+	\clearpage
+	\thispagestyle{empty}
+	\mbox{}
+	\clearpage
 }
 
 %ddedicatory
@@ -238,14 +245,15 @@
     \newpage
 }
 
-\newcommand{\depigrafe}[1]{
+\newcommand{\depigrafe}[3][]{
+    \if\relax\detokenize{#1}\relax\else\nocite{#1}\fi
     \vspace*{\fill} % Move para a parte inferior da página
     \begin{flushright} % Alinha todo o conteúdo à direita
         \begin{minipage}{0.4\textwidth} % Controla a largura do texto
-            \itshape #1
+            \itshape #2
         \end{minipage}\\
         \vspace{1em} % Adiciona espaço entre a citação e o autor
-        \textbf{(Nome do autor)}
+        \textbf{#3}
     \end{flushright}
     \vspace{1cm} % Espaçamento abaixo para melhor posicionamento
     \newpage

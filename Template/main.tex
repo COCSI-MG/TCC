@@ -12,15 +12,22 @@
 \newcommand\dtitle{Título}
 \newcommand\dauthor{Seu nome}
 \newcommand\dadvisor{Diego Cardoso Borda Castro}
+\newcommand\dprogram{Coordenação do Curso de Bacharelado em Sistemas de Informação}
+\newcounter{savedpretextualpage}
 
 \begin{document}
 \pagenumbering{gobble}
-\pagenumbering{roman}
 
 \dcover
+\clearpage
+
+% A contagem oficial começa na folha de rosto.
+\setcounter{page}{1}
 \dcoverback
 
-\includepdf{ficha.pdf}
+% Folhas reservadas: ficha catalográfica e aprovação da banca.
+\dblanksheet
+\dblanksheet
 \input{pre-textuais/dedicatoria}
 \input{pre-textuais/agradecimentos}
 \input{pre-textuais/epigrafe}
@@ -34,7 +41,10 @@
 \newpage
 \listoftables
 
+% Exibe numeração arábica sem reiniciar a contagem.
+\setcounter{savedpretextualpage}{\value{page}}
 \pagenumbering{arabic}
+\setcounter{page}{\value{savedpretextualpage}}
 \justifying
 
 % --------- Capítulos -------------
@@ -54,6 +64,7 @@
 
 \bibliography{references}
 \bibliographystyle{plainnat}
+\bibliographystyle{abntex2-alf}
 
 \label{bibfinalpage}
 
