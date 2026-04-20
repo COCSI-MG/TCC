@@ -12,6 +12,10 @@
 \RequirePackage{colortbl}
 \RequirePackage{datagidx}
 \RequirePackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+
+\RequirePackage[none]{hyphenat}
 \RequirePackage{float}
 \RequirePackage{framed}
 \RequirePackage{graphicx}
