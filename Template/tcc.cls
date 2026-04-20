@@ -6,7 +6,6 @@
 %% Load additional packages and commands.
 \RequirePackage[a4paper, left=3cm, right=2cm, top=3cm, bottom=2cm]{geometry}
 \RequirePackage[utf8]{inputenc}
-\RequirePackage[square,authoryear]{natbib}
 \RequirePackage[dvipsnames,svgnames,table,xcdraw]{xcolor}
 \RequirePackage{amsmath}
 \RequirePackage{booktabs}
@@ -17,6 +16,7 @@
 \RequirePackage{framed}
 \RequirePackage{graphicx}
 \RequirePackage[hidelinks]{hyperref}
+\RequirePackage[alf]{abntex2cite}
 \RequirePackage{indentfirst}
 \RequirePackage{makeidx}
 \RequirePackage{multicol}
