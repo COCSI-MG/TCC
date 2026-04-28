@@ -20,6 +20,7 @@
 \RequirePackage{framed}
 \RequirePackage{graphicx}
 \RequirePackage[hidelinks]{hyperref}
+\RequirePackage[alf]{abntex2cite}
 \RequirePackage{indentfirst}
 \RequirePackage{makeidx}
 \RequirePackage{multicol}
