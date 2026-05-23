@@ -1,0 +1,39 @@
+{
+  "editor.wordWrap": "on",
+  "editor.rulers": [
+    80
+  ],
+  "editor.wordWrapColumn": 80,
+  "editor.formatOnSave": true,
+  "prettier.printWidth": 80,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/__pycache__": true,
+    "**/*.aux": true,
+    "**/*.bbl": true,
+    "**/*.blg": true,
+    "**/*.out": true,
+    "**/*.toc": true,
+    "**/*.lot": true,
+    "**/*.lof": true,
+    "**/*.fls": true,
+    "**/*.fdb_latexmk": true,
+    "**/*.synctex.gz": true,
+    "**/*.log": true
+  },
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-pdf",
+        "-shell-escape",
+        "-interaction=nonstopmode",
+        "-synctex=1",
+        "%DOC%"
+      ]
+    }
+  ]
+}
