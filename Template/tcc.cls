@@ -180,7 +180,7 @@
 	\end{flushright}
 	\vfill
 	{\bfseries \large RIO DE JANEIRO,\\
-		2024}
+		2026}
 }
 
 %dcoverback
@@ -214,7 +214,7 @@
 	\end{flushright}
 	\vfill
 	{\bfseries \large RIO DE JANEIRO,\\
-		2024}
+		2026}
 }
 %dform
 

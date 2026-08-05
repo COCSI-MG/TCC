@@ -21,6 +21,21 @@ set +a
 # Curso fixo, não precisa vir do .env
 export CURSO="Sistemas de Informação"
 
+# Nome do aluno e título do projeto vêm do TCC do aluno (\dauthor e \dtitle
+# em main.tex, na raiz do repositório), não são digitados de novo no .env.
+MAIN_TEX="$ROOT_DIR/../main.tex"
+if [ ! -f "$MAIN_TEX" ]; then
+  echo "main.tex do TCC não encontrado em: $MAIN_TEX"
+  exit 1
+fi
+ALUNO_NOME="$(grep -oP '\\dauthor\{\K[^}]*' "$MAIN_TEX")"
+TITULO_PROJETO="$(grep -oP '\\dtitle\{\K[^}]*' "$MAIN_TEX")"
+if [ -z "$ALUNO_NOME" ] || [ -z "$TITULO_PROJETO" ]; then
+  echo "Não foi possível extrair \\dauthor/\\dtitle de: $MAIN_TEX"
+  exit 1
+fi
+export ALUNO_NOME TITULO_PROJETO
+
 # Orientador é sempre o primeiro membro da banca
 export ORIENTADOR_SIAPE="$BANCA1_SIAPE"
 
@@ -47,7 +62,7 @@ mkdir -p "$OUTPUT_DIR"
 OUTPUT_DIR="$(cd "$OUTPUT_DIR" && pwd)"
 
 # Nomes de todas as variáveis definidas no .env, mais as calculadas acima
-VAR_NAMES="$(grep -oE '^[A-Za-z_][A-Za-z0-9_]*' "$ENV_FILE" | grep -v '^OUTPUT_DIR$') CURSO ORIENTADOR_SIAPE DEFESA_DATA NE1 NE2 NE3 NE4 NE5 NE NO1 NO2 NA1 NA2 NA3 NA4 NA5 NA ALUNO_NPF BANCA1_LINHA BANCA2_LINHA BANCA3_LINHA"
+VAR_NAMES="$(grep -oE '^[A-Za-z_][A-Za-z0-9_]*' "$ENV_FILE" | grep -v '^OUTPUT_DIR$') ALUNO_NOME TITULO_PROJETO CURSO ORIENTADOR_SIAPE DEFESA_DATA NE1 NE2 NE3 NE4 NE5 NE NO1 NO2 NA1 NA2 NA3 NA4 NA5 NA ALUNO_NPF BANCA1_LINHA BANCA2_LINHA BANCA3_LINHA"
 
 ARQUIVOS=(
   "1_declaracao_liberacao_nota"
