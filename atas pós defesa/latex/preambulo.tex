@@ -1,0 +1,44 @@
+% Preâmbulo comum aos formulários do CEFET/RJ - DIREN/DEPES
+% Reproduz a formatação dos documentos originais (fonte, margens, cores e tabelas)
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{carlito}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{setspace}
+\usepackage{etoolbox}
+\pagestyle{empty}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\definecolor{tableheadergray}{RGB}{217,217,217}
+
+\newcommand{\cabecalho}{%
+\begin{center}
+CENTRO FEDERAL DE EDUCAÇÃO TECNOLÓGICA CELSO SUCKOW DA FONSECA (CEFET/RJ)\\
+DIRETORIA DE ENSINO (DIREN)\\
+DEPARTAMENTO DE EDUCAÇÃO SUPERIOR (DEPES)
+\end{center}}
+
+\newcommand{\linhaassinatura}{\rule{8cm}{0.4pt}}
+
+% Imprime "N - texto" apenas se o texto não estiver vazio (usado na tabela
+% de exigências de modificação da Ata de Defesa). Altura da linha fixa em
+% 0.95cm: se o texto for longo demais para uma linha, ele é reduzido de
+% tamanho (nunca aumenta a altura da linha), garantindo que a tabela nunca
+% ultrapasse a segunda página.
+\newcommand{\exigencia}[2]{%
+  \parbox[t][0.95cm][t]{\linewidth}{%
+    \ifstrempty{#2}{}{%
+      \sffamily\fontsize{9}{10}\selectfont #1 - #2%
+    }%
+  }%
+}
